@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Про компанію Корчма Богдана, що спеціалізується на продажу алкогольних напоїв по всій Україні.">
+    <meta name="keywords" content="алкоголь, продаж, Україна, Корчма Богдана">
     <title>Про нашу компанію</title>
     <style>
         body {
-            background-color: #f5f5f5;
+            background-color: #f0f0f0;
             color: #2c3e50;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
         }
         .nav-bar {
-            background-color: #34495e;
+            background: linear-gradient(45deg, #34495e, #2c3e50);
             padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         .nav-bar a {
             color: #ecf0f1;
@@ -23,13 +34,25 @@
             padding: 10px 20px;
             display: inline-block;
             font-size: 18px;
+            transition: background-color 0.3s ease;
         }
         .nav-bar a:hover {
             background-color: #d35400;
             border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(211, 84, 0, 0.3);
         }
         .highlight {
             color: #d35400;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin-top: 80px; 
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         .decorative-line {
             width: 80%;
@@ -37,46 +60,85 @@
             border-top: 5px solid #c0392b;
             margin: 20px auto;
         }
+        h2, h3, h4 {
+            margin: 10px 0;
+        }
         .paragraph-style {
             font-size: 18px;
             line-height: 1.6;
             color: #7f8c8d;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+            width: 100%;
+        }
+        .footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .nav-bar a {
+                display: block;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="nav-bar">
-        <a href="file:///C:/Users/danel/Desktop/author.html">Сторінка автора</a>
-        <a href="file:///C:/Users/danel/Desktop/company.html">Сторінка компанії</a>
-        <a href="file:///C:/Users/danel/Desktop/news.html">Сторінка новин</a>
+        <a href="author.html">Сторінка автора</a>
+        <a href="company.html">Сторінка компанії</a>
+        <a href="news.html">Сторінка новин</a>
     </div>
-    <h2 id="companyInfo" title="Інформація про фірму" lang="uk">Про нашу компанію</h2>
 
-    <h3 class="highlight" lang="uk" dir="ltr">Віртуальна фірма "Корчма Богдана"</h3>
+    <div class="container">
+        <h2 id="companyInfo">Про нашу компанію</h2>
 
-    <h4 class="highlight" lang="uk" dir="ltr">Моя компанія спеціалізується на продажі алкогольних напоїв по всій Україні</h4>
-    <hr size="5" color="#c0392b" width="80%" class="decorative-line">
-    <p class="paragraph-style" dir="ltr" style="text-align: center;">
-        Фірма "Корчма Богдана" була заснована у 2024 році з метою забезпечення клієнтів найкращими алкогольними напоями зі всього світу. 
-        Ми співпрацюємо з провідними виробниками та пропонуємо широкий асортимент продукції для найвибагливіших смаків.
-        <br title="Новий рядок" class="highlight" style="margin: 10px 0;">
-        Наша місія – забезпечити клієнтам доступ до якісних напоїв, які додадуть особливого шарму будь-якому святу або заходу.
-        Пийте та кайфуйте.
-    </p>
+        <h3>Віртуальна фірма "Корчма Богдана"</h3>
 
-    <hr size="5" color="#c0392b" width="80%" class="decorative-line">
+        <h4>Моя компанія спеціалізується на продажі алкогольних напоїв по всій Україні</h4>
 
-    <p class="paragraph-style" dir="ltr" style="text-align: center;">
-        Ми прагнемо створити комфортні умови для покупців, забезпечуючи зручний процес вибору та замовлення продукції через наш веб-сайт.
-        Ваш комфорт та задоволення – наші головні пріоритети.
-    </p>
+        <hr class="decorative-line">
 
-    <u title="Підкреслений текст" id="vision" class="highlight">"Корчма Богдана"</u>
-    <br title="Контактна інформація" class="highlight" style="margin: 10px 0;">
+        <p class="paragraph-style">
+            Фірма "Корчма Богдана" була заснована у 2024 році з метою забезпечення клієнтів найкращими алкогольними напоями зі всього світу. 
+            Ми співпрацюємо з найкращими постачальниками, щоб надати вам найвищу якість продукції.
+        </p>
 
-    <small lang="uk" id="contactDetails" class="highlight">Email: daneliuk.bohdan@chnu.edu.ua</small>
+        <p class="paragraph-style">
+            Ми прагнемо створити комфортні умови для покупців, забезпечуючи зручний процес вибору та замовлення продукції через наш веб-сайт.
+            Ваш комфорт та задоволення – наші головні пріоритети.
+        </p>
 
-    <i lang="uk" id="companyRole" class="highlight">Лідери у світі алкоголю</i>
+        <p class="highlight">"Корчма Богдана"</p>
+
+        <h3>Наша локація</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20823.83261908845!2d25.930308871210114!3d48.29107097436138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4734c8fcaa4fdc43%3A0x104e1e0e9ed4d7d8!2z0J_QvtC70LDRhtC40LLQsNGB0LggMTAx!5e0!3m2!1suk!2sua!4v1696534461223!5m2!1suk!2sua" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+    <footer class="footer">
+        <small>Контактна інформація: <a href="mailto:daneliuk.bohdan@chnu.edu.ua">daneliuk.bohdan@chnu.edu.ua</a> | Лідери у світі алкоголю</small>
+    </footer>
 
 </body>
 </html>
