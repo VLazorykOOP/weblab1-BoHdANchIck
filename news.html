@@ -71,8 +71,8 @@
         .news-grid {
             display: flex;
             gap: 20px;
-            flex-wrap: nowrap; /* Забороняє перехід на новий рядок */
-            overflow-x: auto; /* Додає горизонтальний скролл при переповненні */
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
         }
         .news-item {
             background: #ffffff;
@@ -80,18 +80,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 15px;
             text-align: center;
-            flex: 1 1 auto; /* Автоматично розширюється в межах контейнера */
-            min-width: 300px; /* Встановлює мінімальну ширину для кожного елемента */
+            flex: 1 1 auto; 
+            min-width: 300px; 
             display: flex;
             flex-direction: column;
-            align-items: center; /* Вирівнює вміст по центру по горизонталі */
+            align-items: center; 
         }
         .news-item img {
             max-width: 100%;
-            height: 200px; /* Фіксована висота для уніфікації висоти зображень */
-            object-fit: cover; /* Обрізає зображення, щоб заповнити область без спотворення */
+            height: 200px; 
+            object-fit: cover; 
             border-radius: 8px;
-            margin-bottom: 10px; /* Відступ між зображенням та текстом */
+            margin-bottom: 10px; 
         }
         .footer {
             background-color: #34495e;
@@ -124,17 +124,17 @@
             margin-top: 20px;
         }
         .special-offer {
-            background: #fff5e6; /* Легкий фон для виділення */
-            border-left: 5px solid #d35400; /* Колір для акценту */
+            background: #fff5e6; 
+            border-left: 5px solid #d35400; 
             padding: 20px;
             margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Вирівнює текст зліва */
+            text-align: left; 
         }
         @media (max-width: 768px) {
             .news-grid {
-                flex-wrap: wrap; /* Дозволяє елементам переходити на новий рядок на менших екранах */
+                flex-wrap: wrap; 
             }
             .news-item {
                 flex: 1 1 100%;
@@ -159,14 +159,12 @@
             <hr class="decorative-line">
 
             <div class="news-grid">
-                <!-- News Item 1 -->
                 <div class="news-item">
                     <img src="https://kolonist.com.ua/upload/resize_cache/iblock/5f6/620_700_1/IMG_3257.jpeg" alt="Новинка 1">
                     <p class="paragraph-style" dir="ltr">
                         Нове вино Bombaclach! Доступне в нашому магазині.
                     </p>
                 </div>
-                <!-- News Item 2 -->
                 <div class="news-item">
                     <img src="https://invino.com.ua/content/uploads/images/124%281%29.png" alt="Новинка 2">
                     <p class="paragraph-style" dir="ltr">
