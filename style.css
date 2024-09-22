@@ -1,0 +1,230 @@
+body {
+    background-color: #f0f0f0;
+    color: #2c3e50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.nav-bar {
+    background: linear-gradient(45deg, #34495e, #2c3e50);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background-color: #d35400;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(211, 84, 0, 0.3);
+}
+
+.highlight {
+    color: #d35400;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 80px; 
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.decorative-line {
+    width: 80%;
+    border: none;
+    border-top: 5px solid #c0392b;
+    margin: 20px auto;
+}
+
+.paragraph-style {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #7f8c8d;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .nav-bar a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+.news-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.news-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    flex: 1 1 auto;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.special-offer {
+    background: #fff5e6;
+    border-left: 5px solid #d35400;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        flex-wrap: wrap;
+    }
+    .news-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* Стилі для маркерованих списків */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+ul li {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ecf0f1;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+}
+
+/* Оголошення лічильника для нумерації списків */
+ol {
+    counter-reset: step-counter; /* Скидаємо лічильник для кожного списку */
+    list-style-type: none; /* Вимкнути стандартну нумерацію */
+    padding-left: 20px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+ol li {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ecf0f1;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    counter-increment: step-counter; /* Збільшуємо лічильник для кожного елемента */
+}
+
+ol li::before {
+    content: counter(step-counter) ". "; /* Виводимо значення лічильника з крапкою */
+    font-weight: bold;
+    color: #d35400;
+    position: absolute;
+    left: -30px; /* Розміщуємо перед елементом списку */
+    top: 10px;
+    font-size: 20px;
+}
+
+ol li:hover {
+    transform: scale(1.05);
+}
+
+/* Стилі для списків визначень */
+dl {
+    margin: 20px auto;
+    padding-left: 20px;
+    text-align: left;
+}
+
+dt {
+    font-weight: bold;
+    color: #d35400;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    font-size: 18px;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
