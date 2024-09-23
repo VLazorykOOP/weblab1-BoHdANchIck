@@ -43,7 +43,7 @@ body {
 .container {
     width: 90%;
     max-width: 800px;
-    margin-top: 80px; 
+    margin-top: 80px;
     padding: 20px;
     background: #ffffff;
     border-radius: 8px;
@@ -163,17 +163,12 @@ ul li {
     margin-bottom: 8px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-ul li:hover {
-    transform: scale(1.05);
 }
 
 /* Оголошення лічильника для нумерації списків */
 ol {
-    counter-reset: step-counter; /* Скидаємо лічильник для кожного списку */
-    list-style-type: none; /* Вимкнути стандартну нумерацію */
+    counter-reset: step-counter;
+    list-style-type: none;
     padding-left: 20px;
     margin: 20px auto;
     text-align: left;
@@ -187,22 +182,17 @@ ol li {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
-    transition: transform 0.3s ease;
-    counter-increment: step-counter; /* Збільшуємо лічильник для кожного елемента */
+    counter-increment: step-counter;
 }
 
 ol li::before {
-    content: counter(step-counter) ". "; /* Виводимо значення лічильника з крапкою */
+    content: counter(step-counter) ". ";
     font-weight: bold;
     color: #d35400;
     position: absolute;
-    left: -30px; /* Розміщуємо перед елементом списку */
+    left: -30px;
     top: 10px;
     font-size: 20px;
-}
-
-ol li:hover {
-    transform: scale(1.05);
 }
 
 /* Стилі для списків визначень */
