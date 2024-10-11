@@ -218,3 +218,42 @@ dd {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
+
+
+/* style.css */
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table td,
+.table th {
+    border: 1px solid black;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+    text-align: left;
+    vertical-align: top;
+}
+
+.cell-blue {
+    background-color: #96fffb;
+}
+
+.cell-orange {
+    background-color: #f8a102;
+}
+
+.cell-green {
+    background-color: #32cb00;
+}
