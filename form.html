@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="Гаштемеленко Яваскриптик Перлович">
+<meta name="Description" content="Форма для реєстрації користувача на сайті з продажу алкогольних напоїв">
+<meta name="Keywords" content="Реєстрація, алкогольні напої, користувач">
+<title>Реєстрація користувача</title>
+<link rel="stylesheet" href="form.css">
+<script>
+    function validateAge() {
+        var age = document.registration.age.value;
+        if (age < 18) {
+            alert("Вам повинно бути не менше 18 років для реєстрації.");
+            return false;
+        }
+        return true;
+    }
+
+    function validatePasswords() {
+        var password = document.registration.password.value;
+        var confirmPassword = document.registration.confirm_password.value;
+        if (password !== confirmPassword) {
+            alert("Паролі не співпадають.");
+            return false;
+        }
+        return true;
+    }
+
+    function validateForm() {
+        return validateAge() && validatePasswords();
+    }
+</script>
+</head>
+<body>
+<div class="container">
+    <h1>Реєстрація користувача</h1>
+    <form id="registration" name="registration" method="post" action="submit_registration.php" accept-charset="UTF-8" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Особиста інформація</legend>
+            <label for="username">Ім'я користувача:</label>
+            <input type="text" id="username" name="username" placeholder="Ваше ім'я користувача" minlength="3" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Ваш пароль" minlength="6" required>
+
+            <label for="confirm_password">Підтвердження пароля:</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Підтвердіть ваш пароль" minlength="6" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ваш email" required>
+
+            <label for="age">Вік:</label>
+            <input type="number" id="age" name="age" placeholder="Ваш вік" min="18" required>
+        </fieldset>
+        <fieldset>
+            <legend>Додаткова інформація</legend>
+            <label for="favorite_drink">Улюблений напій:</label>
+            <select id="favorite_drink" name="favorite_drink" required>
+                <option value="beer">Пиво</option>
+                <option value="wine">Вино</option>
+                <option value="whiskey">Віскі</option>
+                <option value="vodka">Горілка</option>
+            </select>
+            
+            <label for="comments">Коментарі:</label>
+            <textarea id="comments" name="comments" placeholder="Ваші коментарі" rows="4" style="resize: none;"></textarea>
+        </fieldset>
+        
+        <button type="submit">Зареєструватися</button>
+    </form>
+</div>
+</body>
+</html>
