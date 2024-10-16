@@ -219,8 +219,7 @@ dd {
     margin-bottom: 10px;
 }
 
-
-/* табл */
+ 
 .table-container {
     width: 80%;
     margin: 0 auto;
@@ -256,6 +255,12 @@ dd {
 
 .cell-green {
     background-color: #32cb00;
+} 
+
+.wide-cell {
+    width: 70px; /* Встановіть потрібну ширину */
 }
 
-
+.wide-cell1{
+    width: 40px;
+}
