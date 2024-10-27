@@ -5,6 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сторінка Автора</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Обробка подій
+        window.onload = function () {
+            alert("Сторінка повністю завантажена.");
+        };
+
+        window.onunload = function () {
+            alert("Ви залишаєте сторінку.");
+        };
+
+        window.onafterprint = function () {
+            alert("Документ було роздруковано.");
+        };
+
+        window.onbeforeprint = function () {
+            alert("Готуємось до друку документа.");
+        };
+
+        window.onbeforeunload = function () {
+            return "Ви впевнені, що хочете покинути цю сторінку?";
+        };
+
+        window.onblur = function () {
+            alert("Вікно втратило фокус.");
+        };
+
+        window.onerror = function (message, source, lineno, colno, error) {
+            alert(`Сталася помилка: ${message}`);
+        };
+
+        window.onfocus = function () {
+            alert("Вікно отримало фокус.");
+        };
+
+        window.onoffline = function () {
+            alert("Ви перейшли в офлайн.");
+        };
+
+        window.ononline = function () {
+            alert("Ви повернулися в мережу.");
+        };
+
+        window.onpagehide = function () {
+            alert("Сторінка була прихована.");
+        };
+
+        window.onpageshow = function () {
+            alert("Сторінка стала видимою.");
+        };
+
+        window.onpopstate = function () {
+            alert("Змінено стан історії.");
+        };
+
+        window.onresize = function () {
+            alert("Розмір вікна змінено.");
+        };
+
+        window.onstorage = function () {
+            alert("Змінилися дані в сховищі.");
+        };
+
+        window.onundo = function () {
+            alert("Ви виконали скасування.");
+        };
+
+        window.onredo = function () {
+            alert("Ви виконали повтор.");
+        };
+    </script>
 </head>
 <body>
 

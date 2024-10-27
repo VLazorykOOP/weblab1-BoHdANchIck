@@ -245,7 +245,7 @@ dd {
     vertical-align: top;
 }
 
-.cell-blue {
+/* .cell-blue {
     background-color: #96fffb;
 }
 
@@ -255,10 +255,10 @@ dd {
 
 .cell-green {
     background-color: #32cb00;
-} 
+}  */
 
 .wide-cell {
-    width: 70px; /* Встановіть потрібну ширину */
+    width: 70px; 
 }
 
 .wide-cell1{
